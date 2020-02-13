@@ -1,0 +1,13 @@
+<h1>Here's all of my Cryptids</h1>
+
+<div class="centerBox">
+<ul>
+    <% cryps.forEach((cryp, index) => { %>
+       <li><a href="/cryptids/<%=index%>"><%= cryp.name %></a>
+       <form method="POST" action="/cryptids/<%= index %>/?_method=DELETE">
+        <input type="submit" value="delete">
+        </form> 
+        </li>
+    <% }) %>
+</ul>
+</div>
